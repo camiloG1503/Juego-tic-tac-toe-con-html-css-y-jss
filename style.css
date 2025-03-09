@@ -1,0 +1,174 @@
+body {
+    background-color: #000 !important;
+    color: #fff !important;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #fff !important;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 
+                 0 0 40px #00ffff, 0 0 80px #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    background: black !important;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 10px #00ffff;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff; 
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    outline: none;
+}
+
+input[type="text"]::placeholder {
+    color: #ffffff;
+}
+
+input[type="text"] {
+    color: white !important;
+}
+
+button {
+    background: transparent !important;
+    border: 2px solid #ff0000;
+    color: #fff !important;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #ff0000, 0 0 15px #ff0000;
+}
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px #ff0000, 0 0 25px #ff0000;
+}
+
+.puntuacion {
+    width: 300px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 15px #0ff;
+}
+
+.puntuacion th, .puntuacion td {
+    padding: 10px;
+    text-align: center;
+    border: 2px solid #ff0000;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.puntuacion th {
+    background: rgb(255, 0, 0);
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.puntuacion .puntos-x {
+    color: #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.puntuacion .puntos-o {
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.casilla {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+    transition: 0.3s;
+}
+
+.neon-x {
+    color: cyan;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan;
+}
+
+.neon-o {
+    color: rgb(255, 0, 0);
+    text-shadow: 0 0 10px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0), 0 0 30px rgb(255, 0, 0);
+}
+
+.neon-title {
+    color: #ffffff;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
+}
+
+.casilla:hover {
+    background-color: #111;
+    transform: scale(1.1);
+    border-color: #00ffff;
+    box-shadow: 0 0 15px #00ffff;
+}
+
+.bg-light, .bg-white, .card, .modal-content, .accordion-item {
+    background-color: black !important;
+    color: white !important;
+}
+
+.accordion {
+    background-color: black !important;
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+}
+
+.accordion-item {
+    background-color: black !important;
+    border: 2px solid #00ffff;
+}
+
+.accordion-button {
+    background-color: black !important;
+    color: #00ffff !important;
+    border: 2px solid #00ffff;
+    text-shadow: 0 0 5px #00ffff;
+}
+
+.accordion-button:hover {
+    background-color: #111 !important;
+    color: #ff0000 !important;
+    border: 2px solid #ff0000;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+.accordion-body {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid #00ffff;
+    padding: 15px;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .accordion {
+        width: 90%;
+    }
+}

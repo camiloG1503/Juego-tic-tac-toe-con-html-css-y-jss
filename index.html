@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Triki - Tic Tac Toe</title>
+</head>
+<body>
+    <h1 class="text-center mt-3">Triki - Tic Tac Toe</h1>
+    
+    <div class="container text-center">
+        <div class="row mb-4 justify-content-center">
+            <div class="col-md-6 mb-3">
+                <input type="text" id="jugadorX" class="form-control" placeholder="Nombre Jugador X">
+            </div>
+            <div class="col-md-6 mb-3">
+                <input type="text" id="jugadorO" class="form-control" placeholder="Nombre Jugador O">
+            </div>
+        </div>
+        <div class="row mb-4 justify-content-center">
+            <div class="col-md-4">
+                <button class="btn btn-success w-100" onclick="iniciarCuentaRegresiva()">Iniciar Juego</button>
+            </div>
+        </div>
+        
+        <h3 id="contador" class="text-warning"></h3>
+
+        <div class="tablero mx-auto" id="tablero"></div>
+        <p id="estado" class="mt-3 fw-bold"></p>
+        <table class="puntuacion">
+            <tr>
+                <th>Jugador</th>
+                <th>Puntos</th>
+            </tr>
+            <tr>
+                <td id="nombreJugadorX">Jugador X</td>
+                <td class="puntos-x">0</td>
+            </tr>
+            <tr>
+                <td id="nombreJugadorO">Jugador O</td>
+                <td class="puntos-o">0</td>
+            </tr>
+        </table>
+        <button class="btn btn-primary mt-3" onclick="reiniciarJuego()">Reiniciar</button>
+        <button class="btn btn-primary mt-3" onclick="continuarJugando()">Continuar Jugando</button>
+    </div>
+
+    <h2 class="text-center mt-5 neon-title">Preguntas Frecuentes</h2>
+
+    <div class="accordion container mt-3" id="faqAccordion">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed neon-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    ¿Cómo se juega al Triki?
+                </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Cada jugador elige X o O y turnándose colocan su símbolo en un tablero de 3x3. Gana quien logre formar una línea de 3 en fila, columna o diagonal.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed neon-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    ¿Cómo reinicio el juego?
+                </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Presiona el botón <b>Reiniciar</b> para resetear el juego por completo o <b>Continuar Jugando</b> para iniciar una nueva ronda sin perder las puntuaciones.
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed neon-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    ¿Cómo se actualizan las puntuaciones?
+                </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                    Cada vez que un jugador gana, su puntuación se incrementa automáticamente y se guarda en el almacenamiento local del navegador.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="LogicaJuegos.js"></script>
+</body>
+</html>
+
